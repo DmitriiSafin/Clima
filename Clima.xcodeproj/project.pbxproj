@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		286F25AF29C5C8370018B7F8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 286F25AE29C5C8360018B7F8 /* README.md */; };
+		286F25B129C5C85B0018B7F8 /* appWork.gif in Resources */ = {isa = PBXBuildFile; fileRef = 286F25B029C5C85B0018B7F8 /* appWork.gif */; };
 		28C5C568299CE9F400AAE23B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5C567299CE9F400AAE23B /* AppDelegate.swift */; };
 		28C5C56A299CE9F400AAE23B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5C569299CE9F400AAE23B /* SceneDelegate.swift */; };
 		28C5C56C299CE9F400AAE23B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5C56B299CE9F400AAE23B /* WeatherViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		286F25AE29C5C8360018B7F8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		286F25B029C5C85B0018B7F8 /* appWork.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = appWork.gif; sourceTree = "<group>"; };
 		28C5C564299CE9F400AAE23B /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C5C567299CE9F400AAE23B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28C5C569299CE9F400AAE23B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,9 +47,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		286F25AD29C5C6140018B7F8 /* ReadmeResources */ = {
+			isa = PBXGroup;
+			children = (
+				286F25B029C5C85B0018B7F8 /* appWork.gif */,
+			);
+			path = ReadmeResources;
+			sourceTree = "<group>";
+		};
 		28C5C55B299CE9F400AAE23B = {
 			isa = PBXGroup;
 			children = (
+				286F25AE29C5C8360018B7F8 /* README.md */,
+				286F25AD29C5C6140018B7F8 /* ReadmeResources */,
 				28C5C566299CE9F400AAE23B /* Clima */,
 				28C5C565299CE9F400AAE23B /* Products */,
 			);
@@ -176,6 +190,8 @@
 			files = (
 				28C5C574299CE9F600AAE23B /* LaunchScreen.storyboard in Resources */,
 				28C5C571299CE9F600AAE23B /* Assets.xcassets in Resources */,
+				286F25AF29C5C8370018B7F8 /* README.md in Resources */,
+				286F25B129C5C85B0018B7F8 /* appWork.gif in Resources */,
 				28C5C56F299CE9F400AAE23B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
