@@ -155,7 +155,6 @@ class WeatherViewController: UIViewController {
     @objc func getWeather() {
         locationManager.requestLocation()
     }
-    
 }
 
 //MARK: - UITextFieldDelegate
