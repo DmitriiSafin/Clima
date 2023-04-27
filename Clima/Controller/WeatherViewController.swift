@@ -13,7 +13,6 @@ class WeatherViewController: UIViewController {
     private lazy var bacgroundImageView: UIImageView = {
         let image = UIImage(named: "background")
         let view = UIImageView(image: image)
-        view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFill
         return view
     }()
@@ -23,7 +22,6 @@ class WeatherViewController: UIViewController {
         stack.axis = .horizontal
         stack.spacing = 10
         stack.contentMode = .scaleToFill
-        stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
     
@@ -48,7 +46,6 @@ class WeatherViewController: UIViewController {
         textField.autocapitalizationType = .words
         textField.returnKeyType = .go
         textField.autocorrectionType = .no
-        textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
@@ -69,7 +66,6 @@ class WeatherViewController: UIViewController {
         view.tintColor = .label
         view.heightAnchor.constraint(equalToConstant: 120).isActive = true
         view.widthAnchor.constraint(equalToConstant: 120).isActive = true
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -78,7 +74,6 @@ class WeatherViewController: UIViewController {
         stack.axis = .horizontal
         stack.spacing = 0
         stack.contentMode = .scaleToFill
-        stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
     
@@ -87,7 +82,6 @@ class WeatherViewController: UIViewController {
         label.text = "21"
         label.font = .systemFont(ofSize: 80, weight: .heavy)
         label.textAlignment = .right
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -96,7 +90,6 @@ class WeatherViewController: UIViewController {
         label.text = "°"
         label.font = .systemFont(ofSize: 100)
         label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -105,7 +98,6 @@ class WeatherViewController: UIViewController {
         label.text = "C"
         label.font = .systemFont(ofSize: 100)
         label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -113,13 +105,11 @@ class WeatherViewController: UIViewController {
         let label = UILabel()
         label.text = "London"
         label.font = .systemFont(ofSize: 30)
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private lazy var constrView: UIView = {
         let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -129,7 +119,6 @@ class WeatherViewController: UIViewController {
         stack.spacing = 10
         stack.alignment = .trailing
         stack.contentMode = .scaleToFill
-        stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
     
@@ -222,6 +211,12 @@ extension WeatherViewController: CLLocationManagerDelegate {
 extension WeatherViewController {
     
     func setupConstraints() {
+        
+        let views = [bacgroundImageView, locationButton, searchTextField, searchButton, temperatureLabel, degreeLabel, cLabel, searchStackView, conditionImageView, temperatureStackView, cityLabel, constrView, mainStackView]
+        views.forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+        
         view.addSubview(bacgroundImageView)
         searchStackView.addArrangedSubview(locationButton)
         searchStackView.addArrangedSubview(searchTextField)
